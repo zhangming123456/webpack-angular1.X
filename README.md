@@ -23,17 +23,20 @@
 
 ```
 npm install
+或点击 npmDownload.bat 文件
 ```
 
 生产环境
 
 ```
 npm run build
+或点击 npmRunBuild.bat 文件
 ```
 
 开发环境
 
 ```
 npm run dev
+或点击 npmRunDev.bat 文件
 ```
 

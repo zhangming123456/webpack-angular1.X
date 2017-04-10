@@ -36,7 +36,7 @@ module.exports = {
     entry: {
         app: path.join(__dirname, '/src/app/app.js'),
         //vendors: ['vue', 'vue-router', 'vue-resource'],
-        vendors: ['angular', 'angular-route']//angular静态资源名
+        vendors: ['angular', 'angular-ui-router', 'angular-animate', 'angular-ui-bootstrap']//angular静态资源名
     },
     //文件导出的配置
     output: {

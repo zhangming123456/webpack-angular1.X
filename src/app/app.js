@@ -1,21 +1,29 @@
 'use strict';
-// require('../../node_modules/font-awesome/css/font-awesome.min.css');
+//node_modules
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import ngAnimate from 'angular-animate';
+import uiBootstrap from 'angular-ui-bootstrap';
+
+// vendor .css
+import '../../vendors/animate.css/animate.min.css';
+import '../../vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css';
+import '../../vendors/font-awesome-4.7.0/css/font-awesome.min.css';
+
+//statics .css
+import '../../statics/css/reset/reset.css';
+
+//statics .less
+import '../../statics/css/base/main.css';
+
+//statics .js
+import routing from './routing.js';
+import controllers from './controllers.js';
 
 angular.module('app', [
-    require('angular-route'),
-    require('./routing.js'),
-])
-    .config(function ($routeProvider, $locationProvider) {
-        $locationProvider.hashPrefix('');
-        $routeProvider
-            .when('/home', {
-                template: require('../components/home/home.html'),
-                controller: 'appHome'
-            })
-            .when('/main', {
-                template: require('../components/main/main.html'),
-                controller: 'appMain'
-            })
-            .otherwise("/home");
-        // $locationProvider.html5Mode(true);
-    });
+    uiRouter,
+    ngAnimate,
+    uiBootstrap,
+    routing,
+    controllers,
+]);
