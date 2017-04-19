@@ -1,10 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer'),//添加私有前缀
-    __DEV__ = process.env.NODE_ENV === 'dev', //发布环境
     publicPath = '', //资源引用统一前缀
     devtool = '', //source-map模式
-    plugins = require('./webpack.config.plugins');
+    plugins = require('./webpack.config.plugins'),
+	__DEV__=false; //发布环境
+	if(process.env.NODE_ENV){
+		__DEV__ = (process.env.NODE_ENV.trim() === "dev");
+	}
 if (!__DEV__) {
     //js压缩
     plugins = plugins.concat([
